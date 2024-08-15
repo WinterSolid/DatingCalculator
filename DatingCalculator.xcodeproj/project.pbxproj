@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A36E84C2C6EC58700BC2939 /* fun_zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A36E8462C6EC58600BC2939 /* fun_zone.mp4 */; };
+		3A36E84D2C6EC58700BC2939 /* no_go_zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A36E8472C6EC58700BC2939 /* no_go_zone.mp4 */; };
+		3A36E84E2C6EC58700BC2939 /* date_zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A36E8482C6EC58700BC2939 /* date_zone.mp4 */; };
+		3A36E84F2C6EC58700BC2939 /* unicorn_M.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A36E8492C6EC58700BC2939 /* unicorn_M.mp4 */; };
+		3A36E8502C6EC58700BC2939 /* unicorn_F.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A36E84A2C6EC58700BC2939 /* unicorn_F.mp4 */; };
+		3A36E8512C6EC58700BC2939 /* danger_zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A36E84B2C6EC58700BC2939 /* danger_zone.mp4 */; };
 		3ABAFF4E2C6D412D002D1DAE /* DatingCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAFF4D2C6D412D002D1DAE /* DatingCalculatorApp.swift */; };
 		3ABAFF502C6D412D002D1DAE /* DatingCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAFF4F2C6D412D002D1DAE /* DatingCalculatorView.swift */; };
 		3ABAFF522C6D412F002D1DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABAFF512C6D412F002D1DAE /* Assets.xcassets */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A36E8462C6EC58600BC2939 /* fun_zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fun_zone.mp4; sourceTree = "<group>"; };
+		3A36E8472C6EC58700BC2939 /* no_go_zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = no_go_zone.mp4; sourceTree = "<group>"; };
+		3A36E8482C6EC58700BC2939 /* date_zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = date_zone.mp4; sourceTree = "<group>"; };
+		3A36E8492C6EC58700BC2939 /* unicorn_M.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = unicorn_M.mp4; sourceTree = "<group>"; };
+		3A36E84A2C6EC58700BC2939 /* unicorn_F.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = unicorn_F.mp4; sourceTree = "<group>"; };
+		3A36E84B2C6EC58700BC2939 /* danger_zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = danger_zone.mp4; sourceTree = "<group>"; };
 		3ABAFF4A2C6D412D002D1DAE /* DatingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABAFF4D2C6D412D002D1DAE /* DatingCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingCalculatorApp.swift; sourceTree = "<group>"; };
 		3ABAFF4F2C6D412D002D1DAE /* DatingCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingCalculatorView.swift; sourceTree = "<group>"; };
@@ -60,6 +72,12 @@
 				3ABAFF822C6D8416002D1DAE /* View */,
 				3ABAFF812C6D83FC002D1DAE /* ViewModel */,
 				3ABAFF512C6D412F002D1DAE /* Assets.xcassets */,
+				3A36E84B2C6EC58700BC2939 /* danger_zone.mp4 */,
+				3A36E8482C6EC58700BC2939 /* date_zone.mp4 */,
+				3A36E8462C6EC58600BC2939 /* fun_zone.mp4 */,
+				3A36E8472C6EC58700BC2939 /* no_go_zone.mp4 */,
+				3A36E8492C6EC58700BC2939 /* unicorn_M.mp4 */,
+				3A36E84A2C6EC58700BC2939 /* unicorn_F.mp4 */,
 				3ABAFF532C6D412F002D1DAE /* Preview Content */,
 			);
 			path = DatingCalculator;
@@ -147,8 +165,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A36E84C2C6EC58700BC2939 /* fun_zone.mp4 in Resources */,
 				3ABAFF552C6D412F002D1DAE /* Preview Assets.xcassets in Resources */,
+				3A36E8512C6EC58700BC2939 /* danger_zone.mp4 in Resources */,
+				3A36E84F2C6EC58700BC2939 /* unicorn_M.mp4 in Resources */,
+				3A36E84D2C6EC58700BC2939 /* no_go_zone.mp4 in Resources */,
 				3ABAFF522C6D412F002D1DAE /* Assets.xcassets in Resources */,
+				3A36E84E2C6EC58700BC2939 /* date_zone.mp4 in Resources */,
+				3A36E8502C6EC58700BC2939 /* unicorn_F.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
