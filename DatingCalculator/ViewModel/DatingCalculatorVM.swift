@@ -5,15 +5,15 @@
 //  Created by ZakTank on 8/14/24.
 //
 import Combine
-import UIKit
+import AVKit
 
 enum Gender {
     case male
     case female
 }
-
 class DatingCalculatorVM: ObservableObject {
-    @Published var zone: Zone?
+    @Published var videoFileName: String?
+    @Published var description: String?
     @Published var hotness: Double = 5
     @Published var craziness: Double = 5
     @Published var gender: Gender = .female
@@ -26,33 +26,39 @@ class DatingCalculatorVM: ObservableObject {
         case .female:
             switch (hot, crazy) {
             case (let h, let c) where h < 5 && c > 7:
-                zone = Zone(imageName: "no_go_zone", description: "No-Go Zone")
+                videoFileName = "no_go_zone"
+                description =  "no_go_zone"
             case (let h, let c) where h >= 5 && h < 8 && c > 5 && c <= 7:
-                zone = Zone(imageName: "fun_zone", description: "Fun Zone")
+                videoFileName = "fun_zone"
+                description =  "fun_zone"
             case (let h, let c) where h >= 8 && c > 7:
-                zone = Zone(imageName: "danger_zone", description: "Danger Zone")
+                videoFileName = "danger_zone"
+                description =  "danger_zone"
             case (let h, let c) where h >= 6 && h < 8 && c <= 5:
-                zone = Zone(imageName: "date_zone", description: "Date Zone")
+                videoFileName = "date_zone"
+                description =  "date_zone"
             case (let h, let c) where h >= 8 && c <= 5:
-                zone = Zone(imageName: "Marry_zone", description: "Marry Zone")
+                videoFileName = "wife_zone"
+                description =  "Wife Zone"
             default:
-                zone = Zone(imageName: "undefined_zone", description: "Undefined Zone")
+                videoFileName = "undefined_zone"
+                description =  "undefined_zone"
             }
         case .male:
             // Different logic for males (this is just an example)
             switch (hot, crazy) {
             case (let h, let c) where h < 4 && c > 6:
-                zone = Zone(imageName: "no_go_zone", description: "No-Go Zone")
+                videoFileName = "no_go_zone"
             case (let h, let c) where h >= 4 && h < 7 && c > 4 && c <= 6:
-                zone = Zone(imageName: "fun_zone", description: "Fun Zone")
+                videoFileName = "fun_zone"
             case (let h, let c) where h >= 7 && c > 6:
-                zone = Zone(imageName: "danger_zone", description: "Danger Zone")
+                videoFileName = "danger_zone.mp4"
             case (let h, let c) where h >= 5 && h < 7 && c <= 4:
-                zone = Zone(imageName: "date_zone", description: "Date Zone")
+                videoFileName = "date_zone"
             case (let h, let c) where h >= 7 && c <= 4:
-                zone = Zone(imageName: "Marry_zone", description: "Marry Zone")
+                videoFileName = "wife_zone"
             default:
-                zone = Zone(imageName: "undefined_zone", description: "Undefined Zone")
+                videoFileName = "undefined_zone"
             }
         }
     }
