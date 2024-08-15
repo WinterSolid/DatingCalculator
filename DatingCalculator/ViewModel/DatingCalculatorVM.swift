@@ -2,7 +2,7 @@
 //  DatingCalculatorVM.swift
 //  DatingCalculator
 //
-//  Created by Zakee Tanksley on 8/14/24.
+//  Created by ZakTank on 8/14/24.
 //
 import Combine
 import UIKit
