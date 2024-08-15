@@ -44,6 +44,21 @@ struct DatingCalculatorView: View {
             }
             .padding(.bottom, 20)
             
+            // Gender Toggle Button
+            Button(action: {
+                viewModel.gender = (viewModel.gender == .female) ? .male : .female
+            }) {
+                HStack {
+                    Image(systemName: viewModel.gender == .female ? "person.circle.fill" : "person.circle")
+                    Text(viewModel.gender == .female ? "Female" : "Male")
+                }
+                .padding()
+                .background(viewModel.gender == .female ? Color.pink : Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+            .padding(.bottom, 20)
+            
             // Button to calculate the zone
             Button(action: {
                 viewModel.determineZone()
