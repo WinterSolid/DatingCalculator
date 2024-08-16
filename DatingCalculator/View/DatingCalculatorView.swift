@@ -10,7 +10,7 @@ import AVKit
 struct DatingCalculatorView: View {
     @StateObject private var viewModel = DatingCalculatorVM()
     @State private var player: AVPlayer? = nil
-
+    
     var body: some View {
         VStack {
             // Video Player
@@ -36,13 +36,13 @@ struct DatingCalculatorView: View {
                     .frame(width: 200, height: 200)
                     .padding(.bottom, 20)
             }
-
+            
             // Display Zone Description
             Text(viewModel.description?.uppercased() ?? "UNDEFINED ZONE")
                 .font(.largeTitle)
                 .padding(.top, 20)
                 .padding(.bottom, 30)
-
+            
             // Sliders for Hotness and Craziness
             VStack {
                 VStack {
@@ -51,7 +51,7 @@ struct DatingCalculatorView: View {
                         .padding(.horizontal)
                 }
                 .padding(.bottom, 20)
-
+                
                 VStack {
                     Text("Craziness: \(Int(viewModel.craziness))")
                     Slider(value: $viewModel.craziness, in: 1...10, step: 1)
@@ -74,7 +74,7 @@ struct DatingCalculatorView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
                 }
-
+                
                 // Button to calculate the zone
                 Button(action: {
                     viewModel.determineZone()
@@ -86,13 +86,10 @@ struct DatingCalculatorView: View {
                         .cornerRadius(10)
                 }
             }
-
-            
         }
         .padding()
     }
 }
-
 
 #Preview {
     DatingCalculatorView()
