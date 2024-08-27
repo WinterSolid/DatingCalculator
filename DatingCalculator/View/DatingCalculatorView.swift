@@ -22,13 +22,14 @@ struct DatingCalculatorView: View {
                         player = AVPlayer(url: url)
                         player?.play()
                     }
-                    .onChange(of: viewModel.videoFileName) { newFileName in
+                    .onChange(of: viewModel.videoFileName) { oldFileName, newFileName in
                         // Update player and automatically play the new video when the videoFileName changes
                         if let newUrl = Bundle.main.url(forResource: newFileName, withExtension: "mp4") {
                             player = AVPlayer(url: newUrl)
                             player?.play() // Automatically start playing
                         }
                     }
+
             } else {
                 Image(systemName: "questionmark.circle")
                     .resizable()
