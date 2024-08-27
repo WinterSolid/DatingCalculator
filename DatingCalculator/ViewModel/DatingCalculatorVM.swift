@@ -26,27 +26,27 @@ class DatingCalculatorVM: ObservableObject {
         case .female:
             switch (hot, crazy) {
                 // No-Go Zone (Hot < 5, Crazy > 7)
-            case (let h, let c) where h < 5 && c > 7:
+            case (let h, let c) where (0...5).contains(h) && (0...10).contains(c):
                 videoFileName = "no_go_zone"
-                description =  "No Go"
+                description = "No Go"
                 // Fun Zone (Hot 5-7, Crazy 5-7)
-            case (let h, let c) where (5...7).contains(h) && (5...7).contains(c):
+            case (let h, let c) where (5...8).contains(h) && (6...8).contains(c):
                 videoFileName = "fun_zone"
                 description =  "Fun Zone"
                 //Danger Zone (Hot > 7, Crazy > 7)
-            case (let h, let c) where h > 7 && c > 7:
+            case (let h, let c) where (5...10).contains(h) && (7...10).contains(c):
                 videoFileName = "danger_zone"
                 description =  "Danger"
                 // Date Zone (Hot 6-8, Crazy ≤ 5)
-            case (let h, let c) where (6...8).contains(h) && c <= 5:
+            case (let h, let c) where (8...10).contains(h) && (7...10).contains(c):
                 videoFileName = "date_zone"
                 description =  "Dateable"
                 // Wife Zone (Hot > 8, Crazy ≤ 5)
-            case (let h, let c) where h > 8 && c <= 5:
-                videoFileName = "wife_zone"
+            case (let h, let c) where (8...10).contains(h) && (5..<7).contains(c):
+                videoFileName = "marry_zone"
                 description =  "Marry"
                 //Unicorn Zone (Hot > 8, Crazy < 4)
-            case (let h, let c) where h > 8 && c < 4:
+            case (let h, let c) where (8...10).contains(h) && (0...5).contains(c):
                 videoFileName = "unicorn_F"
                 description =  "Only in the Movies"
             default:
@@ -55,33 +55,33 @@ class DatingCalculatorVM: ObservableObject {
             }
         case .male:
             switch (hot, crazy) {
-               // No-Go Zone (Hot < 5, Success < 5
-            case (let h, let c) where h < 5 && c < 5:
+                // No-Go Zone (Hot < 5, Crazy > 7)
+            case (let h, let c) where (0...5).contains(h) && (0...10).contains(c):
                 videoFileName = "no_go_zone"
-                description =  "no go "
-                // Fun Zone (Hot 5-7, Success 5-7)
-            case (let h, let c) where (5...7).contains(h) && (5...7).contains(c):
+                description = "No Go"
+                // Fun Zone (Hot 5-7, Crazy 5-7)
+            case (let h, let c) where (5...8).contains(h) && (0...8).contains(c):
                 videoFileName = "fun_zone"
                 description =  "Fun Zone"
-                // Danger Zone (Hot > 7, Success < 5):
-            case (let h, let c) where h > 7 && c < 5:
+                //Danger Zone (Hot > 7, Crazy > 7)
+            case (let h, let c) where (5...10).contains(h) && (7...10).contains(c):
                 videoFileName = "danger_zone"
                 description =  "Danger"
-                // Date Zone (Hot 6-8, Success 6-8)
-            case (let h, let c) where (6...8).contains(h) && (6...8).contains(c):
+                // Date Zone (Hot 6-8, Crazy ≤ 5)
+            case (let h, let c) where (8...10).contains(h) && (7...10).contains(c):
                 videoFileName = "date_zone"
                 description =  "Dateable"
-                // Marriage Zone (Hot > 8, Success > 8)
-            case (let h, let c) where h > 8 && c < 5:
-                videoFileName = "Marry Zone"
+                // Wife Zone (Hot > 8, Crazy ≤ 5)
+            case (let h, let c) where (8...10).contains(h) && (5..<7).contains(c):
+                videoFileName = "marry_zone"
                 description =  "Marry"
                 //Unicorn Zone (Hot > 8, Crazy < 4)
-            case (let h, let c) where h > 8 && c < 2:
+            case (let h, let c) where (8...10).contains(h) && (0...5).contains(c):
                 videoFileName = "unicorn_M"
                 description =  "Only in the Movies"
             default:
                 videoFileName = "undefined_zone"
-                description =  "undefined_zone"
+                description =  "undefined zone"
             }
         }
     }
